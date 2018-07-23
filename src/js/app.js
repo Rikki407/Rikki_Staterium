@@ -1,32 +1,47 @@
 App = {
     web3Provider: null,
     contracts: {},
+    account:0x0,
 
     init: function() {
-         /*
-          * Replace me...
-          */
-
-         return App.initWeb3();
+        return App.initWeb3();
     },
 
     initWeb3: function() {
-         /*
-          * Replace me...
-          */
+        if (typeof web3 !== 'undefined') {
+            App.web3Provider = web3.currentProvider;
+        } else {
+            App.web3Provider = new Web3.providers.HttpProvider(
+                'http://localhost:8545'
+            );
+        }
+        web3 = new Web3(App.web3Provider);
 
-         return App.initContract();
+        App.displayAccountInfo();
+
+        return App.initContract();
     },
 
-    initContract: function() {
-         /*
-          * Replace me...
-          */
+    initContract: () => {
+        $.getJSON('Rikki_Staterium.json', (rikkiStateriumArtifact) => {
+            App.contracts.RikkiStaterium = TruffleContract(rikkiStateriumArtifact);
+        })
     },
+
+    displayAccountInfo: () => {
+        web3.eth.getCoinbase((err, account) => {
+            if (err === null) {
+                App.account = account;
+                console.log(account);
+            }
+            web3.eth.getBalance(account, (err, balance) => {
+                if (err === null) {
+                    console.log(web3.fromWei(balance, "ether")+" Eth");
+                }
+            });
+        });
+    }
 };
-
-$(function() {
-    $(window).load(function() {
-         App.init();
-    });
+$(document).ready(() => {
+    App.init();
 });
