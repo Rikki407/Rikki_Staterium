@@ -36,11 +36,15 @@ App = {
         web3.eth.getCoinbase((err, account) => {
             if (err === null) {
                 App.account = account;
+                $('#eth_account').text(account);
                 console.log(account);
             }
             web3.eth.getBalance(account, (err, balance) => {
                 if (err === null) {
                     console.log(web3.fromWei(balance, 'ether') + ' Eth');
+                    $('#eth_amount').text(
+                        web3.fromWei(balance, 'ether') + ' Eth'
+                    );
                 }
             });
         });

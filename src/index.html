@@ -65,8 +65,8 @@
         <h5 class="card-subtitle mb-2 text-muted">Founder</h5>
         <p class="card-text">Deserunt nostrud non ipsum reprehenderit laboris mollit. Enim est est exercitation cillum consequat in nostrud excepteur
           eu laborum fugiat ad. Veniam excepteur aute commodo culpa proident pariatur. Eiusmod aliqua elit elit consequat
-          adipisicing commodo cupidatat elit excepteur quis mollit khjghvad kgdbjdjk kjsdbbad yeh akjhqa aheqe ahqedk excepteur aute commodo culpa
-          proident pariatur.</p>
+          adipisicing commodo cupidatat elit excepteur quis mollit khjghvad kgdbjdjk kjsdbbad yeh akjhqa aheqe ahqedk excepteur
+          aute commodo culpa proident pariatur.</p>
         <div align="center" class="btn-group btn-group-lg" role="group" aria-label="Basic example" style="display: block;">
           <button type="button" class="btn btn-success" data-toggle="modal" data-target="#stakeModal"> &nbsp&nbspStake&nbsp&nbsp </button>
           <button type="button" class="btn btn-primary">Unstake</button>
@@ -74,36 +74,46 @@
       </div>
     </div>
     <div class="container" style="margin-right: 20px">
-      <div  class="card" style="width: 100%; background-color: rgb(38, 55, 94)">
-          <div  class="btn-group btn-group-lg" role="group" aria-label="Basic example" align="center" style="display: block">
-              <button type="button" class="btn btn-warning" disabled>Prev</button>
-              <button type="button" class="btn btn-danger">Stop</button>
-              <button type="button" class="btn btn-warning">Next</button>
-            </div>
+      <div class="card" style="width: 100%; background-color: rgb(38, 55, 94)">
+
+        <div class="btn-group btn-group-lg" role="group" aria-label="Basic example" align="center" style="display: block; margin: 2px">
+          <span class="badge badge-primary badge-font">
+            Account
+            <span class="badge badge-light" id="eth_account">0x2c2b9c9a4a25e24b174f26114e8926a9f2128fe4</span>
+          </span>
+          <span class="badge badge-primary badge-font">
+            Amount
+            <span class="badge badge-light" id="eth_amount">100</span>
+          </span>
+          <button type="button" class="btn btn-warning" disabled>Prev</button>
+          <button type="button" class="btn btn-danger">Stop</button>
+          <button type="button" class="btn btn-warning">Next</button>
+        </div>
       </div>
     </div>
     <div class="card" style="width: 100%;"></div>
 
     <!-- Modal -->
-<div class="modal fade" id="stakeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Stake in Eth</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">Stake</button>
+    <div class="modal fade" id="stakeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Stake in Eth</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Stake</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
     <div id="footer" class="container">
       <nav class="navbar navbar-default navbar-fixed-bottom justify-content-center">
         <div class="navbar-inner navbar-content-center text-center">
