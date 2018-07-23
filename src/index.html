@@ -9,58 +9,83 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-  <link href="css/app.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <div class="container">
-    <div class="jumbotron text-center">
-      <h1>Staterium</h1>
-    </div>
-  </div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark black">
+    <a class="navbar-brand" href="/">
 
-  <div class="nav justify-content-center">
-    <div class="card" style="width: 18rem;">
+      <img src="./RKLogo.png" width="50" height="50" alt="">
+
+      <span style="vertical-align: middle;color: #B49353">Rikki Staterium</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link active" href="/game">Game</a>
+        <a class="nav-item nav-link" href="/tokens">Tokens</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav justify-content-center" style="position: relative; top: 70px">
+    <div class="card" style="width: 30rem; margin: 10px;">
       <img class="card-img-top" src="https://www.designevo.com/res/templates/thumb_small/symmetrical-red-and-blue-polygon-company.png"
         alt="Card image cap">
       <div class="card-body justify-content-center">
-        <h5 class="card-title">Card title</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <div align="center" class="btn-group btn-group-lg " role="group" aria-label="Basic example" style="display: block">
+        <h4 class="card-title">Project A</h4>
+        <h5 class="card-subtitle mb-2 text-muted">Dream</h5>
+        <p class="card-text">Incididunt et veniam sint pariatur nisi qui voluptate irure. Quis eu sunt labore velit. Id consectetur aute eiusmod
+          nisi voluptate labore non non nulla do deserunt.</p>
+        <h5 class="card-subtitle mb-2 text-muted">Founder</h5>
+        <p class="card-text">Culpa deserunt veniam aute excepteur non pariatur proident eu. Adipisicing anim tempor eiusmod amet commodo reprehenderit
+          consectetur pariatur ex anim dolor dolore sit aute. Laborum do aliquip pariatur ea ipsum in nisi ad et labore voluptate.
+          Aute labore laborum qui ea est pariatur officia quis velit. Aute duis labore ex officia officia nulla qui culpa
+          aliquip nostrud veniam non. Adipisicing est consectetur occaecat nisi aliquip in aliquip.</p>
+        <div align="center" class="btn-group btn-group-lg" role="group" aria-label="Basic example" style="display: block;height: 100%">
           <button type="button" class="btn btn-success"> &nbsp&nbspStake&nbsp&nbsp </button>
           <button type="button" class="btn btn-primary">Unstake</button>
         </div>
       </div>
     </div>
 
-    <div class="card " style="width: 18rem;">
+    <div class="card " style="width: 30rem; margin: 10px;">
       <img class="card-img-top" src="https://www.designevo.com/res/templates/thumb_small/blue-wing-and-circle.png" alt="Card image cap">
       <div class="card-body justify-content-center">
-        <h5 class="card-title">Card title</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <div align="center" class="btn-group btn-group-lg " role="group" aria-label="Basic example" style="display: block">
+        <h4 class="card-title">Project B</h4>
+        <h5 class="card-subtitle mb-2 text-muted">Dream</h5>
+        <p class="card-text">Adipisicing nostrud pariatur tempor minim veniam adipisicing velit. Mollit esse minim aliqua veniam ea quis eu deserunt
+          incididunt adipisicing ipsum nulla laboris est. Eu nostrud ea pariatur fugiat.</p>
+        <h5 class="card-subtitle mb-2 text-muted">Founder</h5>
+        <p class="card-text">Deserunt nostrud non ipsum reprehenderit laboris mollit. Enim est est exercitation cillum consequat in nostrud excepteur
+          eu laborum fugiat ad. Veniam excepteur aute commodo culpa proident pariatur. Eiusmod aliqua elit elit consequat
+          adipisicing commodo cupidatat elit excepteur quis mollit khjghvad kgdbjdjk kjsdbbad yeh akjhqa aheqe ahqedk.</p>
+        <div align="center" class="btn-group btn-group-lg"  role="group" aria-label="Basic example" style="display: block;height: 100%">
           <button type="button" class="btn btn-success"> &nbsp&nbspStake&nbsp&nbsp </button>
           <button type="button" class="btn btn-primary">Unstake</button>
         </div>
       </div>
     </div>
-
+    <div  id="footer" class="container">
+      <nav class="navbar navbar-default navbar-fixed-bottom justify-content-center">
+        <div class="navbar-inner navbar-content-center text-center">
+          <p class="text-muted" credit>
+            <a href="http://www.startereum.com">Staterium</a> - &copy; 2018 -
+            <a href="https://www.github.com/Rikki407">Rikki407</a>
+          </p>
+        </div>
+      </nav>
+    </div>
   </div>
 
 
-  <div id="footer" class="container">
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-      <div class="navbar-inner navbar-content-center text-center">
-        <p class="text-muted" credit>
-          <a href="#">Staterium</a> - &copy; 2018 -
-          <a href="#">Rikki407</a>
-        </p>
-      </div>
-    </nav>
-  </div>
+
 
 
 
