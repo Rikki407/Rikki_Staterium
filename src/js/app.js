@@ -1,7 +1,7 @@
 App = {
     web3Provider: null,
     contracts: {},
-    account:0x0,
+    account: 0x0,
 
     init: function() {
         return App.initWeb3();
@@ -23,9 +23,13 @@ App = {
     },
 
     initContract: () => {
-        $.getJSON('Rikki_Staterium.json', (rikkiStateriumArtifact) => {
-            App.contracts.RikkiStaterium = TruffleContract(rikkiStateriumArtifact);
-        })
+        $.getJSON('Rikki_Staterium.json', rikkiStateriumArtifact => {
+            App.contracts.RikkiStaterium = TruffleContract(
+                rikkiStateriumArtifact
+            );
+            App.contracts.RikkiStaterium.setProvider(App.web3Provider);
+            return App.reloadGame();
+        });
     },
 
     displayAccountInfo: () => {
@@ -36,8 +40,17 @@ App = {
             }
             web3.eth.getBalance(account, (err, balance) => {
                 if (err === null) {
-                    console.log(web3.fromWei(balance, "ether")+" Eth");
+                    console.log(web3.fromWei(balance, 'ether') + ' Eth');
                 }
+            });
+        });
+    },
+
+    reloadGame: () => {
+        App.contracts.RikkiStaterium.deployed().then(instance => {
+            console.log(instance);
+            instance.Matches.call(11).then((match, err) => {
+                console.log(match[2].toString(10));
             });
         });
     }
