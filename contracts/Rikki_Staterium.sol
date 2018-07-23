@@ -46,8 +46,11 @@ contract Rikki_Staterium {
    
     //Player Functions
    
-    function stake(uint256 _tag, uint256 _waveID, uint256 _matchID) payable public {
-        
+    function stake(uint256 _tag, uint256 _waveID, uint256 _matchID) payable public returns(uint256){
+        if(Matches[_matchID]._waveID == _waveID && _waveID!=0){
+            Matches[_matchID].StakedTag[msg.sender] = _tag;
+            return Matches[_matchID].StakedTag[msg.sender]; 
+        }
     }
    
     function unstake(uint256 _waveID, uint256 _matchID) public  {

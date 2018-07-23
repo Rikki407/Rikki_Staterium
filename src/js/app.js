@@ -41,7 +41,7 @@ App = {
             }
             web3.eth.getBalance(account, (err, balance) => {
                 if (err === null) {
-                    console.log(web3.fromWei(balance, 'ether') + ' Eth');
+                    console.log(DummyMatches['10']);
                     $('#eth_amount').text(
                         web3.fromWei(balance, 'ether') + ' Eth'
                     );
