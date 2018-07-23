@@ -1,10 +1,13 @@
-body {
-   
-}
+
 .black{
     background-color: rgb(0, 0, 0);
 }
 .navbar{
     padding: 0;
     font-size: 1.1em;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 30rem; margin: 10px;
 }
