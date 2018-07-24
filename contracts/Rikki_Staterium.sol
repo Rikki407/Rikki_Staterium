@@ -47,14 +47,19 @@ contract Rikki_Staterium {
     //Player Functions
    
     function stake(uint256 _tag, uint256 _waveID, uint256 _matchID) payable public returns(uint256){
-        if(Matches[_matchID]._waveID == _waveID && _waveID!=0){
-            Matches[_matchID].StakedTag[msg.sender] = _tag;
-            return Matches[_matchID].StakedTag[msg.sender]; 
-        }
+        require(Matches[_matchID]._waveID == _waveID && _waveID!=0);
+        uint256 oneEth = 1 ether;
+        uint256 _maxStake = Matches[_matchID].maxStake*oneEth;
+        uint256 _minStake = Matches[_matchID].minStake*oneEth;
+        require(msg.value <= _maxStake  && msg.value  >= _minStake );
+            
+        Matches[_matchID].StakedTag[msg.sender] = _tag;
+        Matches[_matchID].StakedAmount[msg.sender] = msg.value;
     }
    
     function unstake(uint256 _waveID, uint256 _matchID) public  {
-       owner.transfer(address(this).balance);
+        require(Matches[_matchID]._waveID == _waveID && _waveID!=0);
+        msg.sender.transfer(Matches[_matchID].StakedAmount[msg.sender]);
     }
     function () public payable{}
 
